@@ -43,7 +43,7 @@ class PdfFile(Unpacker):
 
         try:
             _, f = p.parse(
-                filepath, forceMode=True, looseMode=True, manualAnalysis=False
+                filepath, forceMode=False, looseMode=True, manualAnalysis=False
             )
         except Exception as e:
             raise UnpackException(f"peepdf parsing failure: {e}")
